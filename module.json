@@ -1,0 +1,20 @@
+{
+  "name": "letimer-efm32",
+  "version": "0.0.0",
+  "description": "Low Energy Timer module for the EFM32.",
+  "author": "Marcus Chang",
+  "homepage": "",
+  "licenses": [
+    {
+      "url": "about:blank",
+      "type": ""
+    }
+  ],
+  "dependencies": {
+    "emlib": "ARM-RD/emlib",
+    "gpio-efm32": "ARM-RD/gpio-efm32",
+    "ytstatic": "ARM-RD/ytstatic",
+    "yterror": "ARM-RD/yterror"
+    },
+  "targetDependencies": {}
+}
