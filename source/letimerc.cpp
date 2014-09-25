@@ -1,99 +1,16 @@
-#import "letimer/LeTimerC.h"
+#include "letimer/LeTimerC.h"
 
-#import "emlib/em_letimer.h"
-#import "emlib/em_cmu.h"
-#import "emlib/em_gpio.h"
+#include "gpio/GPIO.h"
+
+#include "emlib/em_letimer.h"
+#include "emlib/em_cmu.h"
+#include "emlib/em_gpio.h"
 
 
 #include <stdio.h>
 
 #define LETIMER_ROUTE_OUT_MASK 0x03UL
 #define YT_Platform_Time_Base 32768
-
-enum PinName{
-    Pin_Not_Connected = 0,
-    Pin_NC = 0,
-
-    Pin_PA0,
-    Pin_PA1,
-    Pin_PA2,
-    Pin_PA3,  // U0_TX #2
-    Pin_PA4,  // U0_RX #2
-    Pin_PA5,  // LEU1_TX #1
-    Pin_PA6,  // LEU1_RX #1
-    
-    Pin_PB0,
-    Pin_PB1,
-    Pin_PB2,
-    Pin_PB3,  // US2_TX #1
-    Pin_PB4,  // US2_RX #1
-    Pin_PB5,  // US2_Clk #1
-    Pin_PB6,  // US2_Cs #1
-    Pin_PB7,  // US0_TX #4, US1_Clk #0
-    Pin_PB8,  // US0_RX #4, US1_Cs #0
-    Pin_PB9,  // U1_TX #2
-    Pin_PB10, // U1_RX #2
-    Pin_PB11,
-    Pin_PB12,
-    Pin_PB13, // US0_Clk #4/5, LEU0_TX #1
-    Pin_PB14, // US0_Cs #4/5, LEU0_RX #1
-
-    Pin_PC0,  // US0_TX #5, US1_TX #0
-    Pin_PC1,  // US0_RX #5, US1_RX #0
-    Pin_PC2,  // US2_TX #0
-    Pin_PC3,  // US2_RX #0
-    Pin_PC4,  // US2_Clk #0
-    Pin_PC5,  // US2_Cs #0
-    Pin_PC6,  // LEU1_TX #0
-    Pin_PC7,  // LEU1_RX #0
-    Pin_PC8,  // US0_Cs #2
-    Pin_PC9,  // US0_Clk #2
-    Pin_PC10, // US0_RX #2
-    Pin_PC11, // US0_TX #2
-
-    Pin_PD0,  // US1_TX #1
-    Pin_PD1,  // US1_RX #1
-    Pin_PD2,  // US1_Clk #1
-    Pin_PD3,  // US1_Cs #1
-    Pin_PD4,  // LEU0_TX #0
-    Pin_PD5,  // LEU0_RX #0
-    Pin_PD6,  // US1_RX #2
-    Pin_PD7,  // US1_TX #2
-    Pin_PD8, 
-
-    Pin_PE0,  // U0_TX #1
-    Pin_PE1,  // U0_RX #1
-    Pin_PE2,  // U1_T1 #3
-    Pin_PE3,  // U1_RX #3
-    Pin_PE4,  // US0_Cs #1
-    Pin_PE5,  // US0_Clk #1
-    Pin_PE6,  // US0_RX #1
-    Pin_PE7,  // US0_TX #1
-    Pin_PE8,
-    Pin_PE9,
-    Pin_PE10, // US0_TX #0
-    Pin_PE11, // US0_RX #0
-    Pin_PE12, // US0_RX #3, US0_Clk #0
-    Pin_PE13, // US0_TX #3, US0_Cs #0
-    Pin_PE14, // LEU0_TX #2
-    Pin_PE15, // LEU0_RX #2
-
-    Pin_PF0,  // US1_Clk #2, LEU0_TX #3
-    Pin_PF1,  // US1_Cs #2, LEU0_RX #3 
-    Pin_PF2,  // LEU0_TX #4
-    Pin_PF3,
-    Pin_PF4,
-    Pin_PF5,
-    Pin_PF6,  // U0_TX #0 
-    Pin_PF7,  // U0_RX #0
-    Pin_PF8,
-    Pin_PF9,
-    Pin_PF10, // U1_TX #1
-    Pin_PF11,  // U1_RX #1 
-    Pin_PF12,
-
-    Pin_Max,
-};
 
 
 /* Default configuration for LETIMER0 */
