@@ -1,6 +1,6 @@
 {
   "name": "letimer-efm32",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Low Energy Timer module for the EFM32.",
   "author": "Marcus Chang",
   "homepage": "",
