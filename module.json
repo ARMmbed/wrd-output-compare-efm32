@@ -11,10 +11,10 @@
     }
   ],
   "dependencies": {
-    "emlib": "ARM-RD/emlib",
-    "gpio-efm32": "ARM-RD/gpio-efm32",
-    "ytstatic": "ARM-RD/ytstatic",
-    "yterror": "ARM-RD/yterror"
+    "emlib": "ARMmbed/emlib",
+    "gpio-efm32": "ARMmbed/gpio-efm32",
+    "ytstatic": "ARMmbed/ytstatic",
+    "yterror": "ARMmbed/yterror"
   },
   "targetDependencies": {}
 }
