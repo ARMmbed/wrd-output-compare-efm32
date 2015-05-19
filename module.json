@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Low Energy Timer module for the EFM32.",
   "author": "Marcus Chang",
-  "homepage": "",
+  "homepage": "https://github.com/ARMmbed/letimer-efm32",
   "licenses": [
     {
       "url": "https://spdx.org/licenses/Apache-2.0",
@@ -11,10 +11,7 @@
     }
   ],
   "dependencies": {
-    "emlib": "ARMmbed/emlib",
-    "gpio-efm32": "ARMmbed/gpio-efm32",
-    "ytstatic": "ARMmbed/ytstatic",
-    "yterror": "ARMmbed/yterror"
+    "mbed-hal-silabs": "ARMmbed/mbed-hal-silabs#~0.1.3"
   },
   "targetDependencies": {}
 }
