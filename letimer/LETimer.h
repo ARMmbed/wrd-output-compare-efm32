@@ -25,7 +25,7 @@ extern "C" {
 #endif
 
 
-void LETimer(PinName pin, uint32_t period);
+uint8_t LETimer(PinName pin, uint32_t period);
 
 
 

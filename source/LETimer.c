@@ -44,7 +44,7 @@ static const LETIMER_Init_TypeDef letimerInit =
 };
 
 
-void LETimer(PinName pin, uint32_t period)
+uint8_t LETimer(PinName pin, uint32_t period)
 {
     /*  Convert milliseconds to timer ticks.
 
@@ -52,12 +52,10 @@ void LETimer(PinName pin, uint32_t period)
     */
     uint32_t timerTicks = period * Platform_Time_Base / 1000;
 
-#if 0
     if (timerTicks > 0xFFFFUL)
     {
-      return ytError(YTBadRequest);
+      return 1;
     }
-#endif
 
     /* Enable clocks */
     CMU_ClockEnable(cmuClock_LETIMER0, true);
@@ -117,7 +115,7 @@ void LETimer(PinName pin, uint32_t period)
                   break;
          default:
                   /* invalid pin */
-                  return;
+                  return 1;
     }
 
     /*  Pin and period is valid. Set register to new route. */
@@ -135,5 +133,7 @@ void LETimer(PinName pin, uint32_t period)
 
     /* Initialize and start LETIMER */
     LETIMER_Init(LETIMER0, &letimerInit);
+
+    return 0;
 }
 
