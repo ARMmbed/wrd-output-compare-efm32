@@ -16,9 +16,9 @@
 
 #include "letimer/LETimer.h"
 
-#include "emlib/em_letimer.h"
-#include "emlib/em_cmu.h"
-#include "emlib/em_gpio.h"
+#include "em_letimer.h"
+#include "em_cmu.h"
+#include "em_gpio.h"
 
 
 #include <stdio.h>

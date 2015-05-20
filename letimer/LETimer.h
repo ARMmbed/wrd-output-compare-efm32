@@ -18,7 +18,7 @@
 #define __LETIMER_H__
 
 
-#include "mbed.h"
+#include "PinNames.h"
 
 #ifdef __cplusplus
 extern "C" {
