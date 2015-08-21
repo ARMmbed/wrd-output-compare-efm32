@@ -11,7 +11,7 @@
     }
   ],
   "dependencies": {
-    "mbed-hal-silabs": "ARMmbed/mbed-hal-silabs#~0.4.0"
+    "mbed-hal-silabs": "~0.4.0"
   },
   "targetDependencies": {}
 }
