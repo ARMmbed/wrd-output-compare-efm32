@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-#include "letimer/LETimer.h"
+#include "output-compare/OutputCompare.h"
 
+#include "PinNames.h"
 #include "em_letimer.h"
 #include "em_cmu.h"
 #include "em_gpio.h"
@@ -44,7 +45,7 @@ static const LETIMER_Init_TypeDef letimerInit =
 };
 
 
-uint8_t LETimer(PinName pin, uint32_t period)
+bool OutputCompare(int pin, uint32_t period)
 {
     /*  Convert milliseconds to timer ticks.
 
@@ -54,7 +55,7 @@ uint8_t LETimer(PinName pin, uint32_t period)
 
     if (timerTicks > 0xFFFFUL)
     {
-      return 1;
+      return false;
     }
 
     /* Enable clocks */
@@ -115,7 +116,7 @@ uint8_t LETimer(PinName pin, uint32_t period)
                   break;
          default:
                   /* invalid pin */
-                  return 1;
+                  return false;
     }
 
     /*  Pin and period is valid. Set register to new route. */
@@ -134,6 +135,6 @@ uint8_t LETimer(PinName pin, uint32_t period)
     /* Initialize and start LETIMER */
     LETIMER_Init(LETIMER0, &letimerInit);
 
-    return 0;
+    return true;
 }
 
