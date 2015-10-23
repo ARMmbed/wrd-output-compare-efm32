@@ -1,6 +1,6 @@
 {
   "name": "output-compare-efm32",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Output compare module for the EFM32.",
   "author": "Marcus Chang",
   "homepage": "https://github.com/ARMmbed/output-compare-efm32",
