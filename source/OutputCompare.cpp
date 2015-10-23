@@ -62,7 +62,6 @@ bool OutputCompare(int pin, uint32_t period)
     CMU_ClockEnable(cmuClock_LETIMER0, true);
     CMU_ClockEnable(cmuClock_GPIO, true);
 
-
     /*  Assert the pin name is valid and find module/location.
         Configure pin to push pull so the LETIMER can override it.
 
