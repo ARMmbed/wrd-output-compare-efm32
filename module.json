@@ -11,7 +11,7 @@
     }
   ],
   "dependencies": {
-    "output-compare": "*",
+    "wrd-output-compare": "*",
     "mbed-hal-silabs": "^1.1.0"
   }
 }
