@@ -1,7 +1,7 @@
 {
-  "name": "output-compare-efm32",
+  "name": "wrd-output-compare-efm32",
   "version": "2.1.0",
-  "description": "Output compare module for the EFM32.",
+  "description": "Wearable Reference Design output compare module for the EFM32.",
   "author": "Marcus Chang",
   "homepage": "https://github.com/ARMmbed/output-compare-efm32",
   "licenses": [
@@ -11,7 +11,7 @@
     }
   ],
   "dependencies": {
-    "output-compare": "~1.0.0",
-    "mbed-hal-silabs": "~0.5.0"
+    "output-compare": "*",
+    "mbed-hal-silabs": "^1.1.0"
   }
 }
